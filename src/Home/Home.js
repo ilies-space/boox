@@ -165,8 +165,8 @@ export const Home = () => {
       {/* SearchBar  */}
       <View style={styles.searchBarHoler}>
         <Input
-          placeholder="Search a book"
-          rightIcon={<Icon name="search" size={24} color={'gray'} />}
+          placeholder="البحث عن كتاب"
+          leftIcon={<Icon name="search" size={24} color={'gray'} />}
           inputContainerStyle={styles.srachInput}
           onChangeText={(value) => setSearchInput(value)}
           inputStyle={{color: 'white'}}

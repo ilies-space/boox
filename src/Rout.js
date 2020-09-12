@@ -36,7 +36,7 @@ export const Rout = () => {
             name="Home"
             component={Home}
             options={{
-              tabBarLabel: 'Home',
+              tabBarLabel: 'الرئيسية',
               tabBarIcon: ({color}) => (
                 <MaterialCommunityIcons name="home" color={color} size={26} />
               ),
@@ -46,7 +46,7 @@ export const Rout = () => {
             name="Chat"
             component={Chat}
             options={{
-              tabBarLabel: 'Chat',
+              tabBarLabel: 'الرسائل',
               tabBarIcon: ({color}) => (
                 <MaterialCommunityIcons name="chat" color={color} size={26} />
               ),
@@ -56,7 +56,7 @@ export const Rout = () => {
             name="Nearby"
             component={Nearby}
             options={{
-              tabBarLabel: 'Nearby',
+              tabBarLabel: 'بالقرب',
               tabBarIcon: ({color}) => (
                 <MaterialCommunityIcons
                   name="map-search"
@@ -70,7 +70,7 @@ export const Rout = () => {
             name="Exchange"
             component={Exchange}
             options={{
-              tabBarLabel: 'Exchange',
+              tabBarLabel: 'تبادل',
               tabBarIcon: ({color}) => (
                 <FontAwesome5 name="exchange-alt" color={color} size={26} />
               ),
@@ -80,7 +80,7 @@ export const Rout = () => {
             name="Profile"
             component={Profile}
             options={{
-              tabBarLabel: 'Profile',
+              tabBarLabel: 'الحساب',
               tabBarIcon: ({color}) => (
                 <MaterialCommunityIcons
                   name="account"
