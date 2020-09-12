@@ -221,7 +221,7 @@ export const Home = () => {
             {/* Another btn  */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtn}>تكنولود</Text>
+                <Text style={styles.tagFilterBtn}>تكنولوجيا</Text>
               </TouchableWithoutFeedback>
             </View>
           </View>

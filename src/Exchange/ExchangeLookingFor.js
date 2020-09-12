@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Colors from '../Colors';
 
-export const Exchange = ({navigation}) => {
+export const ExchangeLookingFor = ({navigation}) => {
   return (
     <View style={styles.mainView}>
       <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>

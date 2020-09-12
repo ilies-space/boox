@@ -3,7 +3,7 @@ import {View, Text} from 'react-native';
 //
 import {Home} from './Home/Home';
 import {Nearby} from './Nearby/Nearby';
-import {Exchange} from './Exchange/Exchange';
+import {ExchangeStack} from './Exchange/ExchangeStack';
 import {Profile} from './Profile/Profile';
 import {Chat} from './Chat/Chat';
 //
@@ -68,7 +68,7 @@ export const Rout = () => {
           />
           <Tab.Screen
             name="Exchange"
-            component={Exchange}
+            component={ExchangeStack}
             options={{
               tabBarLabel: 'تبادل',
               tabBarIcon: ({color}) => (
