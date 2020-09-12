@@ -179,49 +179,49 @@ export const Home = () => {
             {/* ActiveBtn */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtnActive}>Top</Text>
+                <Text style={styles.tagFilterBtnActive}>جديد</Text>
               </TouchableWithoutFeedback>
             </View>
             {/* Inactive Btns  */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtn}>Noval</Text>
+                <Text style={styles.tagFilterBtn}>روايات</Text>
               </TouchableWithoutFeedback>
             </View>
             {/* Another btn  */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtn}>Noval</Text>
+                <Text style={styles.tagFilterBtn}>خيال علمي</Text>
               </TouchableWithoutFeedback>
             </View>
             {/* Another btn  */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtn}>Noval</Text>
+                <Text style={styles.tagFilterBtn}>تطوير ذات</Text>
               </TouchableWithoutFeedback>
             </View>
             {/* Another btn  */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtn}>Noval</Text>
+                <Text style={styles.tagFilterBtn}>ديانات</Text>
               </TouchableWithoutFeedback>
             </View>
             {/* Another btn  */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtn}>Noval</Text>
+                <Text style={styles.tagFilterBtn}>تاريخ</Text>
               </TouchableWithoutFeedback>
             </View>
             {/* Another btn  */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtn}>Noval</Text>
+                <Text style={styles.tagFilterBtn}>سياسة</Text>
               </TouchableWithoutFeedback>
             </View>
             {/* Another btn  */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtn}>Noval</Text>
+                <Text style={styles.tagFilterBtn}>تكنولود</Text>
               </TouchableWithoutFeedback>
             </View>
           </View>
