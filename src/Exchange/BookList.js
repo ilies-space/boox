@@ -22,30 +22,40 @@ export const BookList = ({navigation}) => {
       auther: 'بيتر تييل',
       id: '005',
       title: 'من الصفر إلى الواحد',
+      description:
+        ',لوريم ايبسوم  دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور ',
       imagesrc: require('../Assests/book5.jpg'),
     },
     {
       auther: 'د . خولة حمدي',
       id: '003',
       title: 'في قلبي أنثى عبرية',
+      description:
+        ',لوريم ايبسوم  دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور ',
       imagesrc: require('../Assests/book3.jpg'),
     },
 
     {
       auther: 'باولو كويلوا',
       id: '001',
+      description:
+        ',لوريم ايبسوم  دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور ',
       title: 'الخيميائي',
       imagesrc: require('../Assests/book1.jpg'),
     },
     {
       auther: 'د . منى المرشود',
       id: '002',
+      description:
+        ',لوريم ايبسوم  دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور ',
       title: 'أنت لي',
       imagesrc: require('../Assests/book2.jpg'),
     },
     {
       auther: 'سبنسر جونسون',
       id: '006',
+      description:
+        ',لوريم ايبسوم  دولار سيت أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور كونسيكتيتور أدايبا يسكينج أليايت,سيت  دو أيوسمود تيمبور ',
       title: 'من حرك جبنتى',
       imagesrc: require('../Assests/book6.jpg'),
     },
@@ -63,7 +73,7 @@ export const BookList = ({navigation}) => {
           alignItems: 'center',
           marginHorizontal: 20,
         }}>
-        <Text style={{color: 'white', fontSize: 14}}>قبل 2 أيام</Text>
+        {/* <Text style={{color: 'white', fontSize: 14}}>قبل 2 أيام</Text> */}
 
         <View style={{flex: 1, marginHorizontal: 10}}>
           <Text style={{color: 'white', fontWeight: 'bold', fontSize: 20}}>
@@ -71,6 +81,7 @@ export const BookList = ({navigation}) => {
           </Text>
           <View style={{height: 120}}>
             <Text
+              numberOfLines={5}
               style={{
                 color: '#959595',
                 fontSize: 16,
@@ -81,10 +92,30 @@ export const BookList = ({navigation}) => {
           </View>
         </View>
 
-        <Image
-          style={{height: 190, width: 130, borderRadius: 15, marginBottom: 12}}
-          source={item.imagesrc}
-        />
+        <View>
+          <Image
+            style={{
+              height: 170,
+              width: 130,
+              borderRadius: 15,
+              marginBottom: 12,
+            }}
+            source={item.imagesrc}
+          />
+          <View
+            style={{
+              backgroundColor: 'green',
+              position: 'absolute',
+              top: 15,
+              right: -5,
+              rotation: 90,
+              paddingHorizontal: 15,
+            }}>
+            <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
+              متاح
+            </Text>
+          </View>
+        </View>
       </View>
     </TouchableWithoutFeedback>
   );

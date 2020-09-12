@@ -13,6 +13,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Colors from './Colors';
+import {HomeStack} from './Home/HomeStack';
 
 export const Rout = () => {
   const Tab = createBottomTabNavigator();
@@ -34,7 +35,7 @@ export const Rout = () => {
           }}>
           <Tab.Screen
             name="Home"
-            component={Home}
+            component={HomeStack}
             options={{
               tabBarLabel: 'الرئيسية',
               tabBarIcon: ({color}) => (
