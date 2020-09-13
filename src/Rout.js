@@ -25,7 +25,7 @@ export const Rout = () => {
     <View flex={1}>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Home"
+          initialRouteName="LoginStack"
           headerMode="screen"
           screenOptions={{
             headerTintColor: 'white',
