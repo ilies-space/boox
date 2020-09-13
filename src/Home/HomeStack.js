@@ -5,7 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Colors from '../Colors';
 import {Login} from '../Auth/Login';
 import {LoginStack} from '../Auth/LgInStack';
-
+import {SelectedBook} from '../SelectedBook/SelectedBook';
 export const HomeStack = () => {
   const Stack = createStackNavigator();
 
@@ -31,6 +31,19 @@ export const HomeStack = () => {
           title: ' الإشعارات ',
           headerStyle: {
             backgroundColor: 'black',
+          },
+        }}
+      />
+
+      <Stack.Screen
+        name="SelectedBook"
+        component={SelectedBook}
+        options={{
+          headerShown: false,
+
+          title: ' تفاصيل العرض ',
+          headerStyle: {
+            headerShown: false,
           },
         }}
       />
