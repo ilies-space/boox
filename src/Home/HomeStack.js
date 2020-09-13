@@ -3,6 +3,8 @@ import {Home} from './Home';
 import {Notification} from '../Notification/Notification';
 import {createStackNavigator} from '@react-navigation/stack';
 import Colors from '../Colors';
+import {Login} from '../Auth/Login';
+import {LoginStack} from '../Auth/LgInStack';
 
 export const HomeStack = () => {
   const Stack = createStackNavigator();

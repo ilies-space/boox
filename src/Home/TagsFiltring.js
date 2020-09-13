@@ -18,7 +18,7 @@ export default function TagsFiltring() {
             {/* ActiveBtn */}
             <View style={styles.tagFilterBtnHolder}>
               <TouchableWithoutFeedback>
-                <Text style={styles.tagFilterBtnActive}>جديد</Text>
+                <Text style={styles.tagFilterBtnActive}>الأفضل</Text>
               </TouchableWithoutFeedback>
             </View>
             {/* Inactive Btns  */}

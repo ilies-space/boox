@@ -18,7 +18,6 @@ import {Token} from '../Data/data';
 //
 export const Home = ({navigation}) => {
   const [userName, setuserName] = useState('ilies');
-  const [SearchInput, setSearchInput] = useState('');
   // HorizontaleCardView FlatList
 
   ///--------------
@@ -43,6 +42,7 @@ export const Home = ({navigation}) => {
               right: -4,
               rotation: 45,
               paddingHorizontal: 15,
+              borderRadius: 10,
             }}>
             <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
               مطلوب
@@ -57,6 +57,7 @@ export const Home = ({navigation}) => {
               right: -3,
               rotation: 45,
               paddingHorizontal: 15,
+              borderRadius: 10,
             }}>
             <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
               متاح
@@ -137,27 +138,23 @@ export const Home = ({navigation}) => {
         {Token ? (
           <Text style={styles.userNameStyle}>مرحبا, {userName} </Text>
         ) : (
-          <Text
-            style={{
-              color: Colors.MainColor,
-              flex: 1,
-              fontSize: 18,
-              fontWeight: 'bold',
-            }}>
-            تسجيل الدخول
-          </Text>
+          <TouchableWithoutFeedback
+            onPress={() => navigation.push('LoginStack')}>
+            <Text
+              style={{
+                color: Colors.MainColor,
+                flex: 1,
+                fontSize: 15,
+                fontWeight: 'bold',
+                marginRight: 10,
+              }}>
+              تسجيل الدخول
+            </Text>
+          </TouchableWithoutFeedback>
         )}
       </View>
       {/* SearchBar  */}
-      <View style={styles.searchBarHoler}>
-        <Input
-          placeholder="البحث عن كتاب"
-          leftIcon={<Icon name="search" size={24} color={'gray'} />}
-          inputContainerStyle={styles.srachInput}
-          onChangeText={(value) => setSearchInput(value)}
-          inputStyle={{color: 'white'}}
-        />
-      </View>
+
       {/* Tag Filtring  */}
       <TagsFiltring />
       {/* HorizontaleCardView */}
@@ -171,6 +168,25 @@ export const Home = ({navigation}) => {
       </View>
 
       <View style={{flex: 1}}>
+        <View
+          style={{
+            height: 35,
+            alignItems: 'center',
+            flexDirection: 'row',
+            marginHorizontal: 20,
+            marginVertical: 10,
+          }}>
+          <Text style={{color: Colors.MainColor, fontSize: 16}}>فتح الكل</Text>
+          <Text
+            style={{
+              flex: 1,
+              alignItems: 'flex-end',
+              color: 'grey',
+              fontSize: 20,
+            }}>
+            اخر الإضافات
+          </Text>
+        </View>
         <ListofBooks />
       </View>
     </View>
@@ -191,17 +207,18 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
   },
   notficationBall: {
-    height: 50,
-    width: 50,
+    height: 35,
+    width: 35,
+    marginLeft: 5,
   },
   header: {
     flexDirection: 'row',
-    paddingVertical: 15,
+    paddingVertical: 5,
     alignItems: 'center',
     paddingRight: 20,
   },
   searchBarHoler: {
-    paddingRight: 20,
+    paddingRight: 10,
   },
   srachInput: {
     backgroundColor: Colors.grayColor,
@@ -209,5 +226,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'black',
     paddingHorizontal: 10,
+    height: 40,
   },
 });

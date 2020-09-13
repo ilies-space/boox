@@ -1,10 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
-import {
-  FlatList,
-  ScrollView,
-  TouchableWithoutFeedback,
-} from 'react-native-gesture-handler';
+import {FlatList, TouchableWithoutFeedback} from 'react-native-gesture-handler';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Colors from '../Colors';
 
@@ -98,7 +94,7 @@ export const BookList = ({navigation}) => {
               height: 170,
               width: 130,
               borderRadius: 15,
-              marginBottom: 12,
+              marginBottom: 15,
             }}
             source={item.imagesrc}
           />
@@ -106,10 +102,11 @@ export const BookList = ({navigation}) => {
             style={{
               backgroundColor: 'green',
               position: 'absolute',
-              top: 15,
-              right: -5,
-              rotation: 90,
-              paddingHorizontal: 15,
+              top: 10,
+              right: -2,
+              rotation: 45,
+              paddingHorizontal: 10,
+              borderRadius: 10,
             }}>
             <Text style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
               متاح

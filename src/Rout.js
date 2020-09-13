@@ -14,84 +14,38 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Colors from './Colors';
 import {HomeStack} from './Home/HomeStack';
+import {createStackNavigator} from '@react-navigation/stack';
+import BottomNavgation from './BottomNavgation';
+import {LoginStack} from './Auth/LgInStack';
 
 export const Rout = () => {
-  const Tab = createBottomTabNavigator();
+  const Stack = createStackNavigator();
 
   return (
     <View flex={1}>
       <NavigationContainer>
-        <Tab.Navigator
-          tabBarOptions={{
-            activeTintColor: Colors.MainColor,
-            inactiveTintColor: Colors.grayColor,
-            labelStyle: {
-              fontSize: 14,
-            },
-            tabStyle: {
-              backgroundColor: 'black',
-              paddingTop: 10,
-            },
+        <Stack.Navigator
+          initialRouteName="Home"
+          headerMode="screen"
+          screenOptions={{
+            headerTintColor: 'white',
+            headerStyle: {backgroundColor: 'tomato'},
           }}>
-          <Tab.Screen
-            name="Home"
-            component={HomeStack}
+          <Stack.Screen
+            name="BottomNavgation"
+            component={BottomNavgation}
             options={{
-              tabBarLabel: 'الرئيسية',
-              tabBarIcon: ({color}) => (
-                <MaterialCommunityIcons name="home" color={color} size={26} />
-              ),
+              headerShown: false,
             }}
           />
-          <Tab.Screen
-            name="Chat"
-            component={Chat}
+          <Stack.Screen
+            name="LoginStack"
+            component={LoginStack}
             options={{
-              tabBarLabel: 'الرسائل',
-              tabBarIcon: ({color}) => (
-                <MaterialCommunityIcons name="chat" color={color} size={26} />
-              ),
+              headerShown: false,
             }}
           />
-          <Tab.Screen
-            name="Nearby"
-            component={Nearby}
-            options={{
-              tabBarLabel: 'بالقرب',
-              tabBarIcon: ({color}) => (
-                <MaterialCommunityIcons
-                  name="map-search"
-                  color={color}
-                  size={26}
-                />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Exchange"
-            component={ExchangeStack}
-            options={{
-              tabBarLabel: 'تبادل',
-              tabBarIcon: ({color}) => (
-                <FontAwesome5 name="exchange-alt" color={color} size={26} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Profile"
-            component={Profile}
-            options={{
-              tabBarLabel: 'الحساب',
-              tabBarIcon: ({color}) => (
-                <MaterialCommunityIcons
-                  name="account"
-                  color={color}
-                  size={26}
-                />
-              ),
-            }}
-          />
-        </Tab.Navigator>
+        </Stack.Navigator>
       </NavigationContainer>
     </View>
   );

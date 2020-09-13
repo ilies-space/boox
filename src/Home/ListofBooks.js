@@ -82,42 +82,44 @@ export default function ListofBooks() {
   ];
 
   return (
-    <View>
-      {/* exchanges offers books list  */}
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          paddingRight: 25,
-          marginVertical: 20,
-          flex: 1,
-        }}>
-        <TouchableWithoutFeedback onPress={() => console.log('All offers')}>
-          <Text style={{color: Colors.MainColor, fontSize: 15, marginLeft: 20}}>
-            كل العروض
-          </Text>
-        </TouchableWithoutFeedback>
-        <Text
-          style={{
-            color: 'grey',
-            fontSize: 25,
-            flex: 1,
-            fontWeight: 'bold',
-          }}>
-          عروض للتبادل
-        </Text>
-      </View>
-      {/* VerticalCardView */}
-      <View>
-        <FlatList
-          data={BookList2}
-          renderItem={renderItem2}
-          keyExtractor={(item) => item.id}
-        />
-      </View>
+    <View style={{flex: 1}}>
+      <FlatList
+        data={BookList2}
+        renderItem={renderItem2}
+        keyExtractor={(item) => item.id}
+      />
     </View>
   );
 }
+
+// {/* exchanges offers books list  */}
+// <View
+// style={{
+//   flexDirection: 'row',
+//   alignItems: 'center',
+//   paddingRight: 25,
+//   marginVertical: 20,
+//   flex: 1,
+// }}>
+// <TouchableWithoutFeedback onPress={() => console.log('All offers')}>
+//   <Text style={{color: Colors.MainColor, fontSize: 12, marginLeft: 20}}>
+//     كل العروض
+//   </Text>
+// </TouchableWithoutFeedback>
+// <Text
+//   style={{
+//     color: 'grey',
+//     fontSize: 20,
+//     flex: 1,
+//     fontWeight: 'bold',
+//   }}>
+//   عروض للتبادل
+// </Text>
+// </View>
+// {/* VerticalCardView */}
+// <View>
+
+// </View>
 
 const styles = StyleSheet.create({
   mainView: {
