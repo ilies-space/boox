@@ -12,4 +12,4 @@ UI Preview                 |  UI Preview
 
 
 Made with ❤ and React native
-by : <a href= 'https://www.instagram.com/ilies_ouldmenouer/' >ilies Ouldmenouer</a> 
+by : <a href= 'https://www.linkedin.com/in/ilies-ould-menouer-6a02111a2/' >ilies Ouldmenouer</a> 
